@@ -1,0 +1,13 @@
+<!-- Para poder manipular el elemnto input se debe identificar con una referencia local (#txtBuscar)
+  se implementa el evento keyup.enter que se dispara cuando se suelta la tecla enter
+  el evento ejecuta la función buscar() que se encuentra en el componente
+-->
+<div class="col">
+    <h5>Buscar:</h5>
+    <input 
+      type="text" 
+      class="form_control" 
+      placeholder="Buscar gifs..."
+      (keyup.enter)="buscar()"
+      #txtBuscar>  
+  </div>

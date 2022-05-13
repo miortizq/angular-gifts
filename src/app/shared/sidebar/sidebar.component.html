@@ -1,0 +1,20 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+    <h3 class="text-light">
+      Gifs-App
+    </h3>
+  
+    <hr class="text-white"/>
+    <!-- Adiciona la clase list-reset para evitar los bullet points -->
+    <div class="list-group list-reset">
+      <!-- Adiciona la clase list-gropu-item-action para permitir dar clic sobre el anchor 
+      El href tiene numeral para que no nevegue a ningun lado 
+      Al inluir un pipe al query, se indica la característica visual que va a tomar ese valor 
+      para esta caso, se va a presentar capitalizo el texto -->
+      <a *ngFor=" let query of arraySearch;" 
+        (click)="recargar(query)"  
+        href="#" 
+          class="list-group-item list-gropu-item-action">
+          {{query | titlecase}}
+      </a>
+    </div>
+  </div>
